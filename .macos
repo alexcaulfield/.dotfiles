@@ -1,0 +1,42 @@
+#======================Resources =================
+# https://macos-defaults.com/
+# https://blog.alyssaholland.me/dotfiles-management#heading-configuring-mac-settings
+# https://github.com/mathiasbynens/dotfiles
+
+#======================General settings =================
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+#======================Dock settings =================
+defaults write com.apple.dock "orientation" -string "bottom" # Set dock to the bottom
+defaults write com.apple.dock "show-recents" -bool false # Do not display recent apps in the Dock
+defaults write com.apple.dock "autohide" -bool false # Always display the dock (default)
+defaults write com.apple.dock "mineffect" -string "genie" # Genie effect for minimizing windows (default)
+
+#======================Screencapture settings =================
+mkdir -p $HOME/Desktop/Screenshots # Create "Screenshots" folder on the desktop and set it as the default location 
+defaults write com.apple.screencapture "location" $HOME/Desktop/Screenshots  
+defaults write com.apple.screencapture "show-thumbnail" -bool true # Display the thumbnail after taking a screenshot (default)
+
+#======================Finder settings =================
+defaults write NSGlobalDomain "AppleShowAllExtensions" -bool true # Show filename extensions 
+defaults write NSGlobalDomain "NSDocumentSaveNewDocumentsToCloud" -bool false # Save to disk (not to iCloud) by default
+
+#======================Trackpad settings =================
+defaults write com.apple.AppleMultitouchTrackpad "FirstClickThreshold" -int 1
+defaults write com.apple.AppleMultitouchTrackpad "DragLock" -bool false
+defaults write com.apple.AppleMultitouchTrackpad "Dragging" -bool false
+defaults write com.apple.AppleMultitouchTrackpad "TrackpadThreeFingerDrag" -bool false
+# Trackpad: enable tap to click for this user and for the login screen
+defaults write com.apple.AppleMultitouchTrackpad "Clicking" -bool true
+defaults -currentHost write com.apple.AppleMultitouchTrackpad "TapBehavior" -int 1
+defaults write com.apple.AppleMultitouchTrackpad "TapBehavior" -int 1
+
+#======================Mission Control settings =================
+defaults write com.apple.dock "mru-spaces" -bool false # Do not rearrange spaces based on most recent use
+
+#======================Text Edit settings =================
+defaults write com.apple.TextEdit "RichText" -bool false # Set default document format as plain text (.txt)
