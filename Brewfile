@@ -1,11 +1,12 @@
-brew install --cask brave-browser
-brew install --cask 1password
-brew install --cask slack
-brew install --cask obsidian
-brew install --cask rectangle
-brew install --cask dozer
-brew install --cask spotify
-brew install --cask iterm2
-brew install --cask zoom
-brew install --cask docker
-brew install --cask cursor
+cask "brave-browser"
+cask "obsidian"
+cask "rectangle"
+cask "spotify"
+cask "iterm2"
+cask "docker"
+cask "cursor"
+cask "fish"
+# auto-installed on corp machine
+# cask "1password"
+# cask "slack"
+# cask "zoom"
