@@ -1,7 +1,14 @@
 # My new laptop preferences
 
-Run
-
+Clone this repo
 ```sh
-cd ~/.dotfiles && ./fresh.sh
+git clone https://github.com/alexcaulfield/.dotfiles.git
+```
+
+Then run
+```sh
+cd .dotfiles
+ls -a # see what files are available
+chmod u+x run.sh
+./run.sh
 ```
