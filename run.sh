@@ -37,5 +37,8 @@ brew update
 # Install all our dependencies with bundle (See Brewfile)
 brew bundle --file ./Brewfile
 
+# enable bass to help run nvm in the fish shell
+fisher install edc/bass
+
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
