@@ -15,4 +15,6 @@ cask "fish"
 
 # developer tools
 cask "node"
+cask "nvm"
 cask "yarn"
+cask "fisher"
