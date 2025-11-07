@@ -3,17 +3,17 @@ cask "brave-browser"
 cask "obsidian"
 cask "rectangle"
 cask "spotify"
-cask "iterm2"
-cask "docker"
-cask "cursor"
-cask "fish"
 
 # auto-installed on corp machine
 # cask "1password"
 # cask "slack"
 # cask "zoom"
+# cask "docker"
 
 # developer tools
+cask "iterm2"
+cask "cursor"
+cask "fish"
 cask "node"
 cask "nvm"
 cask "yarn"
