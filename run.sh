@@ -10,19 +10,6 @@ else
   echo "Xcode Command Line Tools already installed."
 fi
 
-# Check if Fish is installed and set it as the default shell if desired
-if command -v fish &>/dev/null; then
-  if ! grep -q "$(command -v fish)" /etc/shells; then
-    substep_info "Adding Fish to available shells..."
-    sudo sh -c "echo $(command -v fish) >> /etc/shells"
-  fi
-  read -p "Do you want to set Fish as your default shell? (y/N): " -n 1 -r
-  echo # Move to a new line
-  if [[ $REPLY =~ ^[Yy]$ ]]; then
-    chsh -s "$(command -v fish)"
-  fi
-fi
-
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -39,6 +26,19 @@ brew bundle --file ./Brewfile
 
 # enable bass to help run nvm in the fish shell
 fisher install edc/bass
+
+# Check if Fish is installed and set it as the default shell if desired
+if command -v fish &>/dev/null; then
+  if ! grep -q "$(command -v fish)" /etc/shells; then
+    substep_info "Adding Fish to available shells..."
+    sudo sh -c "echo $(command -v fish) >> /etc/shells"
+  fi
+  read -p "Do you want to set Fish as your default shell? (y/N): " -n 1 -r
+  echo # Move to a new line
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    chsh -s "$(command -v fish)"
+  fi
+fi
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
