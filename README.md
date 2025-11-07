@@ -1,4 +1,12 @@
-# My new laptop preferences
+# Setting up a new Mac
+
+## What this does
+* Configures your machine with default applications (based on my preferences)
+* Configures simple MacOS system settings
+* Installs developer tools like iTerm2, Cursor, and the Fish shell
+* Installs relevant packages to help you run TypeScript/Node/Python/PostgreSQL apps
+
+## Steps
 
 Clone this repo
 ```sh
