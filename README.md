@@ -23,3 +23,5 @@ chmod u+x run.sh
 ```
 
 If using the Fish shell, add `.config/fish/config.fish` to your local machine at that directory.
+
+To update VSCode/Cursor settings, sync local `.vscode/settings.json` by running `shift cmd P` and selecting `Preferences: Open User Settings (JSON)`

@@ -40,5 +40,8 @@ if command -v fish &>/dev/null; then
   fi
 fi
 
+# Install Cursor/VSCode extensions
+./vscode/extensions.sh
+
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
