@@ -22,7 +22,6 @@ defaults write com.apple.screencapture "location" $HOME/Desktop/Screenshots
 defaults write com.apple.screencapture "show-thumbnail" -bool true # Display the thumbnail after taking a screenshot (default)
 
 #======================Finder settings =================
-defaults write NSGlobalDomain "AppleShowAllExtensions" -bool true # Show filename extensions 
 defaults write NSGlobalDomain "NSDocumentSaveNewDocumentsToCloud" -bool false # Save to disk (not to iCloud) by default
 
 #======================Trackpad settings =================
